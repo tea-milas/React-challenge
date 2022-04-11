@@ -5,6 +5,7 @@ import LogoutButton from "../Buttons/LogoutButton";
 import LoginButton from "../Buttons/LoginButton";
 import HomeButton from "../Buttons/HomeButton";
 import SearchButton from "../Buttons/SearchButton";
+import "./Header.css";
 
 export const Header = () => {
   const userContext = useContext(UserContext);

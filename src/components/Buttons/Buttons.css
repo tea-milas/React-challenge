@@ -20,3 +20,7 @@
   border: 1px solid #333;
   color: #1db954;
 }
+
+.button--search:hover {
+  text-decoration: none;
+}

@@ -1,5 +1,14 @@
 .buttons {
+  width: 50%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
+}
+
+@media only screen and (min-width: 860px) {
+  .buttons {
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 }

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { DataContext } from "../../context/dataContext";
+import "./Buttons.css";
 
 const SearchButton = () => {
   const dataContext = useContext(DataContext);
@@ -13,7 +14,7 @@ const SearchButton = () => {
         onChange={(e) => setSearchKey(e.target.value)}
         placeholder="Search artists..."
       />
-      <button className="button" type="submit">
+      <button className="button button--search" type="submit">
         🔎
       </button>
     </form>
