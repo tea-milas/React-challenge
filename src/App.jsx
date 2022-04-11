@@ -5,7 +5,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import "./global.css";
 import UserProvider from "./context/userContext";
-import Info from "./pages/Info";
+import PlaylistOverview from "./pages/PlaylistOverview";
+import DataProvider from "./context/dataContext";
 
 /**
  * The starting page for your App
@@ -16,15 +17,20 @@ class App extends Component {
     return (
       <UserProvider>
         <BrowserRouter>
-          <Header />
-          <main>
-            <section>
-              <Routes>
-                <Route path={"/"} element={<Home />} />
-                <Route path={"/playlist"} element={<Info />} />
-              </Routes>
-            </section>
-          </main>
+          <DataProvider>
+            <Header />
+            <main>
+              <section>
+                <Routes>
+                  <Route path={"/"} element={<Home />} />
+                  <Route
+                    path={"/playlist/:id"}
+                    element={<PlaylistOverview />}
+                  />
+                </Routes>
+              </section>
+            </main>
+          </DataProvider>
         </BrowserRouter>
       </UserProvider>
     );

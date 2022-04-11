@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Card.css";
+import "./Card.css";
 /**
  * This should be a React component that, at the very least, comprises an image component a title and a description or subheading.
  *
@@ -8,14 +8,9 @@ import style from "./Card.css";
  *
  */
 const Card = (props) => {
-  const { image, name, description, id, tracksUrl, setSelectedPlaylist } =
-    props;
+  const { image, name, description, playlist, setSelectedPlaylist } = props;
   return (
-    <div
-      key={id}
-      className="card"
-      onClick={() => setSelectedPlaylist(tracksUrl)}
-    >
+    <div className="card" onClick={() => setSelectedPlaylist(playlist)}>
       <img className="card_image" src={image} alt={name + " cover"} />
       <h1 className="card_name">{name}</h1>
       <p className="card_description">{description}</p>

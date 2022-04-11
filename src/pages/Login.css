@@ -1,3 +1,9 @@
-.login_page {
-  /* background-color: rgb(76, 76, 76); */
+.login_window {
+  width: fit-content;
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 25px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  text-align: center;
 }

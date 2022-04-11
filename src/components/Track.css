@@ -1,0 +1,28 @@
+.track {
+  width: 90%;
+  margin: 15px auto;
+
+  border-bottom: 1px solid #333;
+}
+
+.track_image {
+  height: 120px;
+  border-radius: 5px;
+}
+
+.track_info {
+  align-self: center;
+}
+
+@media only screen and (min-width: 860px) {
+  .track {
+    width: 100%;
+    padding-bottom: 15px;
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 1fr;
+  }
+
+  .track_image {
+    height: 60px;
+  }
+}

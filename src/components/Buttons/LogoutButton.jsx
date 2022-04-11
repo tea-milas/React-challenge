@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Buttons.css";
+import "./Buttons.css";
 
 const LogoutButton = ({ logout }) => {
   return (

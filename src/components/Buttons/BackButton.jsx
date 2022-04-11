@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Buttons.css";
 
-const HomeButton = () => {
+const BackButton = () => {
   return (
     <Link to="/">
-      <button className="button">Home</button>
+      <button className="button button--back">{"<"} Go back </button>
     </Link>
   );
 };
 
-export default HomeButton;
+export default BackButton;

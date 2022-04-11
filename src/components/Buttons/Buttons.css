@@ -1,11 +1,16 @@
 .button {
-  padding: 8px 12px;
   border: none;
   background-color: transparent;
   font-size: 1em;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .button:hover {
   text-decoration: underline;
+  color: #1db954;
+}
+
+.button--back {
+  margin-top: 10px;
 }
