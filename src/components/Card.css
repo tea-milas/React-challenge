@@ -1,0 +1,40 @@
+.card {
+  width: 95%;
+  max-width: 250px;
+  height: fit-content;
+  min-height: 350px;
+  margin: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  background-color: #333;
+  color: white;
+}
+
+.card_image {
+  width: 250px;
+  height: 250px;
+}
+
+.card_name,
+.card_description {
+  width: 100%;
+  text-align: left;
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.card_description {
+  font-size: 0.9em;
+  margin: 0;
+}
