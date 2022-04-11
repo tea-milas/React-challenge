@@ -4,6 +4,7 @@ import LogoutButton from "./Buttons/LogoutButton";
 import LoginButton from "./Buttons/LoginButton";
 import { UserContext } from "../context/userContext";
 import HomeButton from "./Buttons/HomeButton";
+import SearchButton from "./Buttons/SearchButton";
 
 export const Header = () => {
   const userContext = useContext(UserContext);
@@ -15,7 +16,7 @@ export const Header = () => {
         <div className="buttons">
           {token ? (
             <>
-              <HomeButton /> <LogoutButton logout={logout} />
+              <SearchButton /> <HomeButton /> <LogoutButton logout={logout} />
             </>
           ) : (
             <LoginButton />

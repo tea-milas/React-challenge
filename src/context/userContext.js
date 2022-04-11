@@ -35,8 +35,6 @@ const UserProvider = (props) => {
     window.localStorage.removeItem("token");
   };
 
-  console.log(token);
-
   return (
     <UserContext.Provider
       value={{

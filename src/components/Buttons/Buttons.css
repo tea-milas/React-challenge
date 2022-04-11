@@ -14,3 +14,9 @@
 .button--back {
   margin-top: 10px;
 }
+
+.search {
+  border-radius: 3px;
+  border: 1px solid #333;
+  color: #1db954;
+}

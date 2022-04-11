@@ -7,6 +7,7 @@ import "./global.css";
 import UserProvider from "./context/userContext";
 import PlaylistOverview from "./pages/PlaylistOverview";
 import DataProvider from "./context/dataContext";
+import SearchResults from "./pages/SearchResults";
 
 /**
  * The starting page for your App
@@ -27,6 +28,7 @@ class App extends Component {
                     path={"/playlist/:id"}
                     element={<PlaylistOverview />}
                   />
+                  <Route path={"/search-results"} element={<SearchResults />} />
                 </Routes>
               </section>
             </main>

@@ -8,12 +8,31 @@ import "./Card.css";
  *
  */
 const Card = (props) => {
-  const { image, name, description, playlist, setSelectedPlaylist } = props;
+  const {
+    image,
+    name,
+    description,
+    playlist,
+    setSelectedPlaylist,
+    followers,
+    genre,
+  } = props;
+
   return (
     <div className="card" onClick={() => setSelectedPlaylist(playlist)}>
-      <img className="card_image" src={image} alt={name + " cover"} />
+      {image && (
+        <img className="card_image" src={image} alt={name + " cover"} />
+      )}
       <h1 className="card_name">{name}</h1>
-      <p className="card_description">{description}</p>
+      {description && <p className="card_description">{description}</p>}
+      {genre && (
+        <ul>
+          {genre.map((gen, i) => (
+            <li key={name + gen + i}>{gen}</li>
+          ))}
+        </ul>
+      )}
+      {followers && <p className="card_description">FOLLOWERS: {followers}</p>}
     </div>
   );
 };

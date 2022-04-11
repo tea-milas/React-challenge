@@ -6,18 +6,42 @@ export const DataContext = createContext({});
 
 const DataProvider = (props) => {
   let navigate = useNavigate();
+
   const userContext = useContext(UserContext);
   const { token } = userContext;
 
+  const [searchKey, setSearchKey] = useState("");
+  const [searchResult, setSearchResult] = useState({});
   const [featuredPlaylists, setFeaturedPlaylists] = useState({});
   const [selectedPlaylist, setSelectedPlaylist] = useState("");
   const [tracksData, setTracksData] = useState({});
 
   const searchArtists = (e) => {
-    fetch("");
+    e.preventDefault();
+
+    fetch(
+      "https://api.spotify.com/v1/search?type=artist&limit=10&q=" + searchKey,
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token,
+        },
+      }
+    )
+      .then((response) => {
+        response
+          .json()
+          .then((data) => {
+            setSearchResult(data.artists.items);
+          })
+          .then(() => navigate("/search-results"));
+      })
+      .catch((error) => console.log(error));
   };
 
-  const goToPlaylist = () => {};
+  console.log(searchResult);
 
   const getFeaturedPlaylists = () => {
     fetch(
@@ -80,6 +104,9 @@ const DataProvider = (props) => {
         getTracks,
         tracksData,
         selectedPlaylist,
+        searchArtists,
+        setSearchKey,
+        searchResult,
       }}
     >
       {props.children}
