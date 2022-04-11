@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import Track from "../components/Track";
 import "./PlaylistOverview.css";
-import { DataContext } from "../context/dataContext";
-import BackButton from "../components/Buttons/BackButton";
+import { DataContext } from "../../context/dataContext";
+import Track from "../../components/Track/Track";
+import BackButton from "../../components/Buttons/BackButton";
 
-const PlaylistOverview = (props) => {
+const PlaylistOverview = () => {
   const dataContext = useContext(DataContext);
   const { tracksData } = dataContext;
 

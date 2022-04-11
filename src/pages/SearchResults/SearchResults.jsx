@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import BackButton from "../components/Buttons/BackButton";
-import { DataContext } from "../context/dataContext";
-import Card from "../components/Card";
-import "./Home.css";
+import { DataContext } from "../../context/dataContext";
+import BackButton from "../../components/Buttons/BackButton";
+import Card from "../../components/Card/Card";
+import "../Home/Home.css";
 
 const SearchResults = () => {
   const dataContext = useContext(DataContext);

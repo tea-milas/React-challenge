@@ -5,7 +5,7 @@ import { UserContext } from "./userContext";
 export const DataContext = createContext({});
 
 const DataProvider = (props) => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const userContext = useContext(UserContext);
   const { token } = userContext;
@@ -40,8 +40,6 @@ const DataProvider = (props) => {
       })
       .catch((error) => console.log(error));
   };
-
-  console.log(searchResult);
 
   const getFeaturedPlaylists = () => {
     fetch(

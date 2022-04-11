@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
-import Card from "../components/Card";
-import Login from "./Login";
-import { UserContext } from "../context/userContext";
+import Card from "../../components/Card/Card";
+import Login from "../Login/Login";
+import { UserContext } from "../../context/userContext";
+import { DataContext } from "../../context/dataContext";
 import "./Home.css";
-import { DataContext } from "../context/dataContext";
 
 export const Home = () => {
   const userContext = useContext(UserContext);
   const { token } = userContext;
   const dataContext = useContext(DataContext);
-  const { featuredPlaylists, getTracks, setSelectedPlaylist } = dataContext;
+  const { featuredPlaylists, setSelectedPlaylist } = dataContext;
 
   return (
     <>
@@ -26,8 +26,6 @@ export const Home = () => {
                   image={playlist.images[0].url}
                   name={playlist.name}
                   description={playlist.description}
-                  tracksUrl={playlist.tracks.href}
-                  getTracks={getTracks}
                   setSelectedPlaylist={setSelectedPlaylist}
                   key={playlist.id}
                 />

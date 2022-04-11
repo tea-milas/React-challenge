@@ -7,7 +7,6 @@ const UserProvider = (props) => {
 
   const REDIRECT_URI = "http://localhost:8080/";
   const CLIENT_ID = "8d3bafe7e5ea4d8594a4a93b33310358";
-  const CLIENT_SECRET = "43bee1b328ab4399ba2b13a9e220d9d9";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
@@ -16,7 +15,7 @@ const UserProvider = (props) => {
     let token = window.localStorage.getItem("token");
 
     if (!token && hash) {
-      let urlParams = new URLSearchParams(
+      const urlParams = new URLSearchParams(
         window.location.hash.replace("#", "?")
       );
 

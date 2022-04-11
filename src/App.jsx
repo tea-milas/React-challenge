@@ -1,17 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
+import Header from "./components/Header/Header";
+import Home from "./pages/Home/Home";
 import "./global.css";
 import UserProvider from "./context/userContext";
-import PlaylistOverview from "./pages/PlaylistOverview";
+import PlaylistOverview from "./pages/PlaylistOverview/PlaylistOverview";
 import DataProvider from "./context/dataContext";
-import SearchResults from "./pages/SearchResults";
-
-/**
- * The starting page for your App
- */
+import SearchResults from "./pages/SearchResults/SearchResults";
 
 class App extends Component {
   render() {
