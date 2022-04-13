@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./PlaylistOverview.css";
 import { DataContext } from "../../context/dataContext";
 import Track from "../../components/Track/Track";
-import BackButton from "../../components/Buttons/BackButton";
+import Button from "../../components/Button/Button";
 
 const PlaylistOverview = () => {
   const dataContext = useContext(DataContext);
@@ -10,7 +10,7 @@ const PlaylistOverview = () => {
 
   return (
     <div className="playlist">
-      <BackButton />
+      <Button text="< Go Back" />
 
       <div className="playlist_title">
         <h3>Title</h3>

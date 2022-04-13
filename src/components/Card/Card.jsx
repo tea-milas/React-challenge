@@ -1,13 +1,6 @@
-/* eslint-disable react/prop-types */
 import React from "react";
 import "./Card.css";
-/**
- * This should be a React component that, at the very least, comprises an image component a title and a description or subheading.
- *
- * @param props
- * @returns
- *
- */
+
 const Card = (props) => {
   const {
     image,
@@ -15,12 +8,21 @@ const Card = (props) => {
     description,
     playlist,
     setSelectedPlaylist,
+    selectedPlaylist,
+    getTracks,
     followers,
     genre,
   } = props;
 
   return (
-    <div className="card" onClick={() => setSelectedPlaylist(playlist)}>
+    <div
+      className="card"
+      onClick={() =>
+        selectedPlaylist === playlist
+          ? getTracks(selectedPlaylist.tracks.href, selectedPlaylist.id)
+          : setSelectedPlaylist(playlist)
+      }
+    >
       {image && (
         <img className="card_image" src={image} alt={name + " cover"} />
       )}

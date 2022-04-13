@@ -1,0 +1,10 @@
+.cards_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+}

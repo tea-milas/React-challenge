@@ -9,7 +9,12 @@ export const Home = () => {
   const userContext = useContext(UserContext);
   const { token } = userContext;
   const dataContext = useContext(DataContext);
-  const { featuredPlaylists, setSelectedPlaylist } = dataContext;
+  const {
+    featuredPlaylists,
+    setSelectedPlaylist,
+    selectedPlaylist,
+    getTracks,
+  } = dataContext;
 
   return (
     <>
@@ -27,6 +32,8 @@ export const Home = () => {
                   name={playlist.name}
                   description={playlist.description}
                   setSelectedPlaylist={setSelectedPlaylist}
+                  selectedPlaylist={selectedPlaylist}
+                  getTracks={getTracks}
                   key={playlist.id}
                 />
               ))}

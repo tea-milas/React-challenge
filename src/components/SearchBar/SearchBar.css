@@ -1,0 +1,25 @@
+.search {
+  width: 65%;
+  max-width: 150px;
+  display: inline-flex;
+}
+
+.search_input {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #333;
+  color: #1db954;
+}
+
+.search_button {
+  font-size: 1em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+@media only screen and (min-width: 860px) {
+  .search {
+    margin-bottom: unset;
+  }
+}

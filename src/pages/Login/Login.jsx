@@ -1,6 +1,6 @@
 import React from "react";
-import LoginButton from "../../components/Buttons/LoginButton";
 import "./Login.css";
+import Button from "../../components/Button/Button";
 
 export const Login = () => {
   return (
@@ -9,7 +9,7 @@ export const Login = () => {
         Hi 👋 <br />
         Login with your Spotify account to continue
       </h1>
-      <LoginButton />
+      <Button text="Login" />
     </div>
   );
 };

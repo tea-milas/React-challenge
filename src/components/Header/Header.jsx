@@ -1,15 +1,13 @@
 import React, { useContext } from "react";
 import { UserContext } from "../../context/userContext";
 import logo from "../../assets/fxdigitallogo.png";
-import LogoutButton from "../Buttons/LogoutButton";
-import LoginButton from "../Buttons/LoginButton";
-import HomeButton from "../Buttons/HomeButton";
-import SearchButton from "../Buttons/SearchButton";
+import Button from "../Button/Button";
+import SearchBar from "../SearchBar/SearchBar";
 import "./Header.css";
 
 export const Header = () => {
   const userContext = useContext(UserContext);
-  const { token, logout } = userContext;
+  const { token } = userContext;
   return (
     <header>
       <nav>
@@ -17,10 +15,10 @@ export const Header = () => {
         <div className="buttons">
           {token ? (
             <>
-              <SearchButton /> <HomeButton /> <LogoutButton logout={logout} />
+              <SearchBar /> <Button text="Logout" />
             </>
           ) : (
-            <LoginButton />
+            <Button text="Login" />
           )}
         </div>
       </nav>

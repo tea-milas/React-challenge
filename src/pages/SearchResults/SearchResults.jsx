@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { DataContext } from "../../context/dataContext";
-import BackButton from "../../components/Buttons/BackButton";
 import Card from "../../components/Card/Card";
-import "../Home/Home.css";
+import Button from "../../components/Button/Button";
+import "./SearchResults.css";
 
 const SearchResults = () => {
   const dataContext = useContext(DataContext);
@@ -10,9 +10,9 @@ const SearchResults = () => {
 
   return (
     <>
-      <BackButton />
+      <Button text="< Go Back" />
 
-      <h3 className="home_title">Search results</h3>
+      <h3 className="title">Search results</h3>
       <div className="cards_wrapper ">
         {searchResult &&
           searchResult.map((artist) => (
