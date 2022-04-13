@@ -1,3 +1,7 @@
+.playlist {
+  padding-top: 15px;
+}
+
 .playlist_title {
   display: none;
 }

@@ -9,7 +9,7 @@ const SearchResults = () => {
   const { searchResult } = dataContext;
 
   return (
-    <>
+    <div className="search_results">
       <Button text="< Go Back" />
 
       <h3 className="title">Search results</h3>
@@ -25,7 +25,7 @@ const SearchResults = () => {
             />
           ))}
       </div>
-    </>
+    </div>
   );
 };
 

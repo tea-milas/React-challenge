@@ -11,6 +11,8 @@
   color: #1db954;
 }
 
-.button--back {
-  margin-top: 10px;
+@media only screen and (max-width: 860px) {
+  .button_home {
+    display: none;
+  }
 }

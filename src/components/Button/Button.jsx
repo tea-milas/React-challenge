@@ -15,7 +15,9 @@ const Button = ({ text }) => {
         </button>
       ) : (
         <Link to="/">
-          <button className="button button--back">{text}</button>
+          <button className={`button ${text === "Home" && "button_home"}`}>
+            {text}
+          </button>
         </Link>
       )}
     </>

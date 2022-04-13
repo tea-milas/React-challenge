@@ -15,7 +15,7 @@ export const Header = () => {
         <div className="buttons">
           {token ? (
             <>
-              <SearchBar /> <Button text="Logout" />
+              <SearchBar /> <Button text="Home" /> <Button text="Logout" />
             </>
           ) : (
             <Button text="Login" />

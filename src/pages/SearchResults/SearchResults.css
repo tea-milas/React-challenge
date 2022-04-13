@@ -1,3 +1,7 @@
+.search_results {
+  margin-top: 15px;
+}
+
 .cards_wrapper {
   display: flex;
   flex-wrap: wrap;
