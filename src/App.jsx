@@ -11,8 +11,8 @@ import SearchResults from "./pages/SearchResults/SearchResults";
 class App extends Component {
   render() {
     return (
-      <UserProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <UserProvider>
           <DataProvider>
             <Header />
             <main>
@@ -28,8 +28,8 @@ class App extends Component {
               </section>
             </main>
           </DataProvider>
-        </BrowserRouter>
-      </UserProvider>
+        </UserProvider>
+      </BrowserRouter>
     );
   }
 }

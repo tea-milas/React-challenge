@@ -24,7 +24,12 @@
     "no-use-before-define": "off",
     "prefer-const": "error",
     "prettier/prettier": "error",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "complexity": ["error", 3],
+    "max-classes-per-file": ["error", 1],
+    "max-statements": ["error", 10],
+    "max-nested-callbacks": ["error", 2],
+    "react/prefer-stateless-function": ["error"]
   },
   "overrides": [
     {

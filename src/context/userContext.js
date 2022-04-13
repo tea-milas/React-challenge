@@ -1,9 +1,10 @@
 import React, { createContext, useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
 export const UserContext = createContext({});
 
 const UserProvider = (props) => {
   const [token, setToken] = useState("");
+  const navigate = useNavigate();
 
   const REDIRECT_URI = "http://localhost:8080/";
   const CLIENT_ID = "8d3bafe7e5ea4d8594a4a93b33310358";
@@ -32,6 +33,7 @@ const UserProvider = (props) => {
   const logout = () => {
     setToken("");
     window.localStorage.removeItem("token");
+    navigate("/");
   };
 
   return (
