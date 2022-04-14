@@ -1,5 +1,7 @@
 # Take-home challenge instructions
 
+**Change the .envexample file into .env and add the code which will be provided in the email.**
+
 ### Aim of this challenge:
 
 - Develop a simple web app using React
