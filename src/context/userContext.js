@@ -7,7 +7,7 @@ const UserProvider = (props) => {
   const navigate = useNavigate();
 
   const REDIRECT_URI = "http://localhost:8080/";
-  const CLIENT_ID = "8d3bafe7e5ea4d8594a4a93b33310358";
+  const CLIENT_ID = process.env.CLIENT_ID;
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
